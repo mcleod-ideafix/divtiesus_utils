@@ -1,5 +1,5 @@
 # DivTIESUS utilities (dot commands for ESXDOS)
-Source code for some dot commands I've written to support the DivTIESUS interface
+Source code for some dot commands I've written to support the DivTIESUS interface. To generate the binary file, use the PASMO assembler this way: `pasmo --bin sourcecode.asm BINARYFILE`
 - GO3E . This dot command has no parameters. It loads a +3E ROM image from the BIN directory of the SD card and installs it as the new system ROM, at the same time as the automapping feature of DivMMC is disabled. So, a +2A/B/3 computer becomes a full featured +2E/+3E machine without the needing of opening and physically changing the ROM chips. GO3E needs any of dvmen3eE.rom or dvmes3eE.rom (just one of them) to be present in the /BIN directory. Such files can be get from the Project +3E page. To return to ESXDOS mode, you must press NMI+RESET.
 - LOADROM . This dot command has one mandatory parameter: the file name of the ROM image to use. LOADROM loads a 16K ROM image and installs it such it becomes the new system ROM for all effects and purposes. To return to ESXDOS, press NMI+RESET.
 - MOUSE . This dot command is used to query/modify the configuration of the Kempston mouse emulation mode. Invoked with no arguments, it will show the current state of Kempston mouse emulation and the syntax for parameters.
